@@ -13,7 +13,7 @@ Using AWS Management Console:
    4. Set/change default execution role appropriately
    5. Click "Create Function"
 2. Upload code
-   1. Click Upload .zip or .jar
+   1. Choose "Upload from" | ".zip or .jar"
    2. Choose the `function-sample-aws-2.0.0.RELEASE-aws.jar`
    3. Click "Upload"
 3. In the Runtime settings, click edit

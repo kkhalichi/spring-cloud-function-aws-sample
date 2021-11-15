@@ -19,7 +19,7 @@ public class FunctionConfiguration {
    }
 
    @Bean
-   public Function<LinkedHashMap<String,String>, LinkedHashMap<String,String>> uppercase() {
+   public Function<Map<String,String>, Map<String,String>> uppercase() {
       return value -> {
          if (value.containsValue("exception")) {
             throw new RuntimeException("Intentional exception which should result in HTTP 417");

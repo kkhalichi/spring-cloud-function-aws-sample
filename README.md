@@ -4,7 +4,7 @@
 mvn clean package
 ```
 
-## Deploy
+## Deploy/Run
 Using AWS Management Console:
 1. Create Function
    1. Author from scratch

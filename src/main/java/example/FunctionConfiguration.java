@@ -3,10 +3,13 @@ package example;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.function.Function;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.http.HttpStatus;
 
 @SpringBootApplication
+@Slf4j
 public class FunctionConfiguration {
 
    /*
@@ -31,6 +34,18 @@ public class FunctionConfiguration {
                                  (map, item) -> map.put(item.getKey(), new StringBuilder(item.getValue()).reverse().toString()),
                                  Map::putAll
                         );
+         }
+      };
+   }
+
+   public Function<Person, HttpStatus> insertPerson() {
+      return value -> {
+         if (value == null) {
+            throw new RuntimeException("Value is null");
+         }
+         else {
+            log.info("Value of person object: {}", value);
+            return HttpStatus.OK;
          }
       };
    }

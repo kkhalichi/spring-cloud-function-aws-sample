@@ -1,0 +1,10 @@
+{
+  "id": "5d7d5fb0-b6e1-4e93-8847-61d328c94d6b",
+  "firstName": "Jane",
+  "lastName": "Doe",
+  "address": {
+      "address1": "123 Main St.",
+      "city": "Santa Fe",
+      "postalCode": "87505"
+  }
+}

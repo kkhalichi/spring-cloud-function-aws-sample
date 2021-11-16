@@ -20,7 +20,7 @@ Using AWS Management Console:
    1. Set "Handler" to: `org.springframework.cloud.function.adapter.aws.FunctionInvoker::handleRequest`
    2. Click Save
 4. Choose the "Test" tab
-   1. Use input located in `src/test/resources/input.json`
+   1. Use input located in `src/test/resources/reverse.json`
    2. Save changes
    3. Click "Test"
    4. Expand "Execution result" | "Details" to view the result

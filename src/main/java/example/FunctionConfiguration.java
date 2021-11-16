@@ -39,12 +39,12 @@ public class FunctionConfiguration {
    }
 
    public Function<Person, HttpStatus> insertPerson() {
-      return value -> {
-         if (value == null) {
+      return person -> {
+         if (person == null) {
             throw new RuntimeException("Value is null");
          }
          else {
-            log.info("Value of person object: {}", value);
+            log.info("Value of person object: {}", person);
             return HttpStatus.OK;
          }
       };

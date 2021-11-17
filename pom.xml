@@ -27,6 +27,7 @@
 		<aws-lambda-events.version>3.10.0</aws-lambda-events.version>
 		<aws-lambda-java-core.version>1.2.1</aws-lambda-java-core.version>
 		<spring-cloud-function.version>3.1.5</spring-cloud-function.version>
+		<spring-cloud-aws-autoconfigure.version>2.2.6.RELEASE</spring-cloud-aws-autoconfigure.version>
 	</properties>
 
 	<dependencies>
@@ -53,6 +54,10 @@
 			<artifactId>aws-lambda-java-core</artifactId>
 			<version>${aws-lambda-java-core.version}</version>
 			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

@@ -5,7 +5,18 @@ mvn clean package
 ```
 
 ## Deploy/Run
-Using AWS Management Console:
+### Using AWS CLI
+
+#### Creating the Function
+TBD
+
+#### Updating Function Code
+Run the following from the project root:
+```shell
+aws lambda update-function-code --function-name spring-cloud-function-aws --zip-file fileb://./target/function-sample-aws-2.0.0.RELEASE-aws.jar
+```
+
+### Using AWS Management Console
 1. Create Function
    1. Author from scratch
    2. Give it a name

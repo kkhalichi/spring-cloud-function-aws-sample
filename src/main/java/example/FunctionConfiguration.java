@@ -51,19 +51,19 @@ public class FunctionConfiguration {
    }
 
    @Bean
-   public Function<Person, HttpStatus> insertPerson() {
+   public Function<Person, Person> insertPerson() {
       return person -> {
          if (person == null) {
             throw new RuntimeException("Value is null");
          }
          log.info("Value of person object: {}", person);
-         return HttpStatus.OK;
+         return person;
       };
    }
 
-   @Bean
-   public Function<S3EventNotification, HttpStatus> dataInput(final Function<Map<String,String>, Map<String,String>> theReverseFunction,
-                                                              final Function<Person, HttpStatus> theInsertPersonFunction) {
+   @SuppressWarnings({"unchecked", "unused"})
+   public Function<S3EventNotification, Object> dataInput(final Function<Map<String,String>, Map<String,String>> theReverseFunction,
+                                                          final Function<Person, Person> theInsertPersonFunction) {
       return event -> {
          if (event == null) {
             throw new RuntimeException("Event is null");
